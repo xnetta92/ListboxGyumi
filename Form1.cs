@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,5 +52,56 @@ namespace ListboxGyumi
             Fruits fruits = (Fruits)listBox_Fruits.SelectedItem;
             listBox_Fruits.Items.Remove(fruits);         
         }
+
+        private void button_Save_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+
+            saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            saveFileDialog1.FilterIndex = 1;
+            saveFileDialog1.RestoreDirectory = true;
+            saveFileDialog1.InitialDirectory = Environment.CurrentDirectory;
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string filename = saveFileDialog1.FileName;
+                using (StreamWriter myStream = new StreamWriter(filename))
+                {
+                    foreach (Fruits item in listBox_Fruits.Items)
+                    {
+                        myStream.Write(item.toTxt());
+                    }
+                    myStream.Flush();
+                }
+            }
+            
+        }
+
+        private void button_upload_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            openFileDialog.FilterIndex = 1;
+            openFileDialog.RestoreDirectory = true;
+            openFileDialog.InitialDirectory = Environment.CurrentDirectory;
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string adatFile = openFileDialog.FileName;
+                using (StreamReader sr = new StreamReader(adatFile))
+                {
+                    while (!sr.EndOfStream)
+                    {
+                        string[] sor = sr.ReadLine().Split(';');
+                        Fruits fruits = new Fruits(ulong.Parse(sor[0]), sor[1], int.Parse(sor[2]));
+                        listBox_Fruits.Items.Add(fruits);
+                    }
+                }
+            }
+        }
     }
 }
+
+
+
+

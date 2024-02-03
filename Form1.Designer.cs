@@ -58,6 +58,7 @@
             this.button_upload.TabIndex = 1;
             this.button_upload.Text = "Upload";
             this.button_upload.UseVisualStyleBackColor = true;
+            this.button_upload.Click += new System.EventHandler(this.button_upload_Click);
             // 
             // button_Save
             // 
@@ -68,6 +69,7 @@
             this.button_Save.TabIndex = 1;
             this.button_Save.Text = "Save";
             this.button_Save.UseVisualStyleBackColor = true;
+            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
             // 
             // button_New
             // 

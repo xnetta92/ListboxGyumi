@@ -33,5 +33,10 @@ namespace ListboxGyumi
             return $"{this.name} ({this.AmountB()})";
         }
 
+        public string toTxt()
+        {
+            return $"{this.productC};{this.name};{this.amount}";
+        }
+
     }
 }
