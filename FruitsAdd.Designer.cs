@@ -1,6 +1,6 @@
 ﻿namespace ListboxGyumi
 {
-    partial class FruitsAdd
+    partial class Form_fruitsAdd
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_fruitsAdd));
             this.label_productCode = new System.Windows.Forms.Label();
             this.textBox_productCode = new System.Windows.Forms.TextBox();
             this.label_name = new System.Windows.Forms.Label();
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.label_amount = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_submit = new System.Windows.Forms.Button();
             this.numericUpDown_amount = new System.Windows.Forms.NumericUpDown();
             this.label_kg = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_amount)).BeginInit();
@@ -57,6 +58,7 @@
             this.textBox_productCode.ReadOnly = true;
             this.textBox_productCode.Size = new System.Drawing.Size(155, 26);
             this.textBox_productCode.TabIndex = 1;
+            this.textBox_productCode.TabStop = false;
             // 
             // label_name
             // 
@@ -86,14 +88,15 @@
             this.label_amount.TabIndex = 0;
             this.label_amount.Text = "Amount";
             // 
-            // button1
+            // button_submit
             // 
-            this.button1.Location = new System.Drawing.Point(25, 213);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 43);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_submit.Location = new System.Drawing.Point(25, 213);
+            this.button_submit.Name = "button_submit";
+            this.button_submit.Size = new System.Drawing.Size(174, 43);
+            this.button_submit.TabIndex = 2;
+            this.button_submit.Text = "button1";
+            this.button_submit.UseVisualStyleBackColor = true;
+            this.button_submit.Click += new System.EventHandler(this.button1_Click);
             // 
             // numericUpDown_amount
             // 
@@ -118,21 +121,23 @@
             this.label_kg.TabIndex = 4;
             this.label_kg.Text = "kg";
             // 
-            // FruitsAdd
+            // Form_fruitsAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(414, 268);
             this.Controls.Add(this.label_kg);
             this.Controls.Add(this.numericUpDown_amount);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_submit);
             this.Controls.Add(this.textBox_name);
             this.Controls.Add(this.textBox_productCode);
             this.Controls.Add(this.label_amount);
             this.Controls.Add(this.label_name);
             this.Controls.Add(this.label_productCode);
-            this.Name = "FruitsAdd";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Form_fruitsAdd";
             this.Text = "FruitsAdd";
+            this.Load += new System.EventHandler(this.Form_fruitsAdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_amount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -146,7 +151,7 @@
         private System.Windows.Forms.Label label_name;
         private System.Windows.Forms.TextBox textBox_name;
         private System.Windows.Forms.Label label_amount;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_submit;
         private System.Windows.Forms.NumericUpDown numericUpDown_amount;
         private System.Windows.Forms.Label label_kg;
     }

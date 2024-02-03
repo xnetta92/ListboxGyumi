@@ -8,15 +8,14 @@ namespace ListboxGyumi
 {
     internal static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+        public static Form_Fruits openForm = null;
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_FruitsRegister());
+            openForm = new Form_Fruits();
+            Application.Run(openForm);
         }
     }
 }

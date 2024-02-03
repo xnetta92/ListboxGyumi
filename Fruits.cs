@@ -8,15 +8,15 @@ namespace ListboxGyumi
 {
     internal class Fruits
     {
-        string productC;
+        ulong productC;
         string name;
         int amount;
 
-        public string ProductC { get => productC; set => productC = value; }
+        public ulong ProductC { get => productC; set => productC = value; }
         public string Name { get => name; set => name = value; }
         public int Amount { get => amount; set => amount = value; }
 
-        public Fruits(string productC, string name, int amount)
+        public Fruits(ulong productC, string name, int amount)
         {
             ProductC = productC;
             Name = name;

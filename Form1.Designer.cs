@@ -1,6 +1,6 @@
 ﻿namespace ListboxGyumi
 {
-    partial class Form_FruitsRegister
+    partial class Form_Fruits
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_FruitsRegister));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Fruits));
             this.listBox_Fruits = new System.Windows.Forms.ListBox();
             this.button_upload = new System.Windows.Forms.Button();
             this.button_Save = new System.Windows.Forms.Button();
@@ -75,6 +75,7 @@
             this.button_New.TabIndex = 1;
             this.button_New.Text = "New";
             this.button_New.UseVisualStyleBackColor = true;
+            this.button_New.Click += new System.EventHandler(this.button_New_Click);
             // 
             // button_edit
             // 
@@ -96,7 +97,7 @@
             this.button_delete.Text = "Delete";
             this.button_delete.UseVisualStyleBackColor = true;
             // 
-            // Form_FruitsRegister
+            // Form_Fruits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -108,20 +109,20 @@
             this.Controls.Add(this.button_upload);
             this.Controls.Add(this.listBox_Fruits);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form_FruitsRegister";
+            this.Name = "Form_Fruits";
             this.Text = "FruitsRegister";
+            this.Load += new System.EventHandler(this.Form_FruitsRegister_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listBox_Fruits;
         private System.Windows.Forms.Button button_upload;
         private System.Windows.Forms.Button button_Save;
         private System.Windows.Forms.Button button_New;
         private System.Windows.Forms.Button button_edit;
         private System.Windows.Forms.Button button_delete;
+        public System.Windows.Forms.ListBox listBox_Fruits;
     }
 }
 
