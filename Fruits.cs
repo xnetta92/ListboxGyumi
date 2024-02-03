@@ -35,7 +35,7 @@ namespace ListboxGyumi
 
         public string toTxt()
         {
-            return $"{this.productC};{this.name};{this.amount}\r\n";
+            return $"{this.productC};{this.name};{this.amount} kg\r\n";
         }
 
     }

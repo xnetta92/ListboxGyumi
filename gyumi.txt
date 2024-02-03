@@ -1,0 +1,5 @@
+1;körte;12 kg
+2;alma;7 kg
+3;citrom;3 kg
+4;eper;9 kg
+5;dinnye;23 kg
