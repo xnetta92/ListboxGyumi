@@ -34,7 +34,7 @@
             this.label_name = new System.Windows.Forms.Label();
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.label_amount = new System.Windows.Forms.Label();
-            this.button_submit = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.numericUpDown_amount = new System.Windows.Forms.NumericUpDown();
             this.label_kg = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_amount)).BeginInit();
@@ -88,15 +88,15 @@
             this.label_amount.TabIndex = 0;
             this.label_amount.Text = "Amount";
             // 
-            // button_submit
+            // button1
             // 
-            this.button_submit.Location = new System.Drawing.Point(25, 213);
-            this.button_submit.Name = "button_submit";
-            this.button_submit.Size = new System.Drawing.Size(174, 43);
-            this.button_submit.TabIndex = 2;
-            this.button_submit.Text = "button1";
-            this.button_submit.UseVisualStyleBackColor = true;
-            this.button_submit.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Location = new System.Drawing.Point(25, 213);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(174, 43);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // numericUpDown_amount
             // 
@@ -128,7 +128,7 @@
             this.ClientSize = new System.Drawing.Size(414, 268);
             this.Controls.Add(this.label_kg);
             this.Controls.Add(this.numericUpDown_amount);
-            this.Controls.Add(this.button_submit);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox_name);
             this.Controls.Add(this.textBox_productCode);
             this.Controls.Add(this.label_amount);
@@ -151,7 +151,7 @@
         private System.Windows.Forms.Label label_name;
         private System.Windows.Forms.TextBox textBox_name;
         private System.Windows.Forms.Label label_amount;
-        private System.Windows.Forms.Button button_submit;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.NumericUpDown numericUpDown_amount;
         private System.Windows.Forms.Label label_kg;
     }

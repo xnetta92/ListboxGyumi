@@ -24,8 +24,32 @@ namespace ListboxGyumi
 
         private void button_New_Click(object sender, EventArgs e)
         {
-            Form_fruitsAdd form_FruitsAdd = new Form_fruitsAdd();
+            Form_fruitsAdd form_FruitsAdd = new Form_fruitsAdd("add");
             form_FruitsAdd.ShowDialog();
+        }
+
+        private void button_edit_Click(object sender, EventArgs e)
+        {
+            if (listBox_Fruits.SelectedIndex < 0)
+            {
+                MessageBox.Show("Please select a fruit!");
+                return;
+            }
+            Fruits fruits = (Fruits)listBox_Fruits.SelectedItem;
+            listBox_Fruits.Items.Remove(fruits);
+            Form_fruitsAdd form_FruitsAdd = new Form_fruitsAdd("edit", fruits);
+            form_FruitsAdd.ShowDialog();
+        }
+
+        private void button_delete_Click(object sender, EventArgs e)
+        {
+            if (listBox_Fruits.SelectedIndex < 0)
+            {
+                MessageBox.Show("Please select a fruit!");
+                return;
+            }
+            Fruits fruits = (Fruits)listBox_Fruits.SelectedItem;
+            listBox_Fruits.Items.Remove(fruits);         
         }
     }
 }

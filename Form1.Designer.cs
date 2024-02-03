@@ -40,7 +40,10 @@
             // listBox_Fruits
             // 
             this.listBox_Fruits.Dock = System.Windows.Forms.DockStyle.Left;
+            this.listBox_Fruits.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.listBox_Fruits.ForeColor = System.Drawing.SystemColors.WindowText;
             this.listBox_Fruits.FormattingEnabled = true;
+            this.listBox_Fruits.ItemHeight = 21;
             this.listBox_Fruits.Location = new System.Drawing.Point(0, 0);
             this.listBox_Fruits.Name = "listBox_Fruits";
             this.listBox_Fruits.Size = new System.Drawing.Size(349, 450);
@@ -86,6 +89,7 @@
             this.button_edit.TabIndex = 1;
             this.button_edit.Text = "Edit";
             this.button_edit.UseVisualStyleBackColor = true;
+            this.button_edit.Click += new System.EventHandler(this.button_edit_Click);
             // 
             // button_delete
             // 
@@ -96,6 +100,7 @@
             this.button_delete.TabIndex = 1;
             this.button_delete.Text = "Delete";
             this.button_delete.UseVisualStyleBackColor = true;
+            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
             // 
             // Form_Fruits
             // 

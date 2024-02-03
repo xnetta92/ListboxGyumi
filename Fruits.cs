@@ -23,5 +23,15 @@ namespace ListboxGyumi
             Amount = amount;
         }
 
+        public int AmountB()
+        {
+            return this.amount;
+        }
+
+        public override string ToString()
+        {
+            return $"{this.name} ({this.AmountB()})";
+        }
+
     }
 }
