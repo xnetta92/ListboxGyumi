@@ -30,12 +30,12 @@ namespace ListboxGyumi
 
         public override string ToString()
         {
-            return $"{this.name} ({this.AmountB()})";
+            return $"{this.productC};{this.name} ({this.AmountB()})";
         }
 
         public string toTxt()
         {
-            return $"{this.productC};{this.name};{this.amount}";
+            return $"{this.productC};{this.name};{this.amount}\r\n";
         }
 
     }
